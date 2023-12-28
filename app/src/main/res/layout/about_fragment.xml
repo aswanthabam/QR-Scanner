@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Made by Aswanth Vc
+******************
+Copy righted content. Dont edit or republish.
+©ABAM
+-->
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:layout_gravity="center_vertical|center_horizontal">
+
+	<LinearLayout
+		android:layout_margin="10dp"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_vertical|center_horizontal"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/about_fragmentTextView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textStyle="bold"
+			android:textSize="25dp"
+			android:typeface="monospace"/>
+
+		<TextView
+			android:id="@+id/about_fragmentTextView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_marginTop="10dp"
+			android:typeface="monospace"
+			android:gravity="center_horizontal"
+			android:ellipsize="marquee"/>
+
+		<TextView
+			android:id="@+id/about_fragmentTextView3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_marginTop="10dp"
+			android:typeface="monospace"
+			android:gravity="center_horizontal"/>
+
+		<TextView
+			android:id="@+id/about_fragmentTextView4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_marginTop="10dp"
+			android:typeface="monospace"
+			android:gravity="center_horizontal"/>
+
+		<TextView
+			android:id="@+id/about_fragmentTextView5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_marginTop="10dp"
+			android:typeface="monospace"
+			android:gravity="center_horizontal"/>
+
+		<RatingBar
+			android:id="@+id/about_fragmentRatingBar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
+
+</FrameLayout>
+

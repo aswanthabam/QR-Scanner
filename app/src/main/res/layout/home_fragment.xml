@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:src="@drawable/ic_launcher"
+		android:layout_margin="10dp"
+		android:layout_marginTop="70dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="QR Scanner"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:typeface="serif"
+		android:textStyle="bold"
+		android:textSize="16sp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="©ABAM"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:typeface="serif"
+		android:textSize="10sp"/>
+
+	<GridLayout
+		android:id="@+id/favorites_grid"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#ffffff"
+		android:rowCount="2"
+		android:columnCount="2"
+		android:layout_margin="30dp">
+
+		<LinearLayout
+			android:id="@+id/home_fragmentButton1"
+			android:animation="@anim/left_to_right_1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="#ffffff"
+			android:layout_row="0"
+			android:layout_column="0"
+			android:layout_columnWeight="1"
+			android:layout_rowWeight="1"
+			android:textSize="14dip"
+			android:orientation="vertical"
+			android:gravity="center_horizontal|center_vertical">
+
+			<ImageView
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:src="@drawable/scan"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Scan QR Code"
+				android:layout_margin="10dp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/home_fragmentButton2"
+			android:animation="@anim/right_to_left_1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="#ffffff"
+			android:layout_row="0"
+			android:layout_column="1"
+			android:textSize="14dip"
+			android:layout_columnWeight="1"
+			android:layout_rowWeight="1"
+			android:orientation="vertical"
+			android:gravity="center_horizontal|center_vertical">
+
+			<ImageView
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:src="@drawable/make"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Make QR Code"
+				android:layout_margin="10dp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/home_fragmentButton3"
+			android:animation="@anim/left_to_right_1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="#ffffff"
+			android:layout_row="1"
+			android:layout_column="0"
+			android:textSize="14dip"
+			android:layout_columnWeight="1"
+			android:layout_rowWeight="1"
+			android:orientation="vertical"
+			android:gravity="center_horizontal|center_vertical"
+			android:layout_columnSpan="2">
+
+			<ImageView
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:src="@drawable/about_us_icon"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="About Us"
+				android:layout_margin="10dp"/>
+
+		</LinearLayout>
+
+	</GridLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/drawer_navigation_item1"
+        android:icon="@drawable/ic_item1"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/drawer_navigation_item2"
+        android:icon="@drawable/scan"
+        android:title="Scanner" />
+
+    <item
+        android:id="@+id/drawer_navigation_item3"
+        android:icon="@drawable/make"
+        android:title="Maker" />
+
+    <item
+        android:id="@+id/drawer_navigation_item4"
+        android:icon="@drawable/ic_item4"
+        android:title="About Us" />
+
+</menu>

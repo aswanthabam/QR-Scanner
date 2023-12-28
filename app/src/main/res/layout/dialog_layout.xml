@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:layout_margin="20dp">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:gravity="center"
+		android:layout_height="wrap_content"
+		android:text="Contents From QR Code"
+		android:background="@color/colorControlHighlight"
+		android:padding="10dp"/>
+
+	<EditText
+		android:id="@+id/dialog_layoutEditText1"
+		android:hint="Content"
+		android:layout_width="match_parent"
+		android:ems="10"
+		android:layout_height="wrap_content"
+		android:maxLines="10"
+		android:typeface="monospace"
+		android:layout_margin="10dp"/>
+
+	<GridLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		rowCount="1"
+		columnCount="1"
+		android:columnCount="1"
+		android:layout_margin="10dp">
+
+		<Button
+			android:background="@color/colorPrimary"
+			android:id="@+id/dialog_layoutButton1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Copy"
+			android:padding="5dp"
+			android:layout_rowWeight="1.0"
+			android:layout_margin="5dp"
+			android:drawableLeft="@drawable/copy_icon"/>
+
+		<Button
+			android:background="@color/colorPrimary"
+			android:id="@+id/dialog_layoutButton2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Share"
+			android:layout_margin="5dp"
+			android:padding="5dp"
+			android:layout_rowWeight="1.0"
+			android:drawableLeft="@drawable/share_icon"/>
+
+		<Button
+			android:background="@color/colorPrimary"
+			android:id="@+id/dialog_layoutButton3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Open In Browser"
+			android:layout_margin="5dp"
+			android:padding="5dp"
+			android:layout_rowWeight="1.0"
+			android:drawableLeft="@drawable/browser_icon"/>
+
+		<Button
+			android:background="@color/colorPrimary"
+			android:id="@+id/dialog_layoutButton4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="To text file"
+			android:layout_margin="5dp"
+			android:padding="5dp"
+			android:layout_rowWeight="1.0"
+			android:drawableLeft="@drawable/saved_icon"/>
+
+		<Button
+			android:background="@color/colorPrimary"
+			android:id="@+id/dialog_layoutButton5"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Phone"
+			android:layout_margin="5dp"
+			android:padding="5dp"
+			android:layout_rowWeight="1.0"
+			android:drawableLeft="@drawable/phone_icon"/>
+
+		<Button
+			android:background="@color/colorPrimary"
+			android:id="@+id/dialog_layoutButton6"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Save to contact"
+			android:layout_margin="5dp"
+			android:padding="5dp"
+			android:layout_rowWeight="1.0"
+			android:drawableLeft="@drawable/contact_icon"/>
+
+	</GridLayout>
+
+</LinearLayout>
+

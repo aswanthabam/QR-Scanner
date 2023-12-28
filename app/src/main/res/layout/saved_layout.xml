@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:layout_margin="29dp">
+
+	<ImageView
+		android:id="@+id/saved_layoutImageView1"
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:src="@drawable/saved"
+		android:layout_marginBottom="10dp"/>
+
+	<TextView
+		android:id="@+id/dialogMessageHeading"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="File Saved"
+		android:typeface="serif"
+		android:textStyle="bold"
+		android:textColor="#000000"/>
+
+	<TextView
+		android:id="@+id/dialogMessageContent"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="File Saved SuccessFully!"
+		android:typeface="serif"
+		android:selectable="true"
+		android:layout_marginTop="10dp"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="right">
+
+		<Button
+			android:id="@+id/dialogMessageButton2"
+			android:layout_width="wrap_content"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:text="Continue"
+			android:layout_marginLeft="10dp"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

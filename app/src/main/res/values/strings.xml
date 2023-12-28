@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QR Scanner</string>
+    <string name="drawer_open">Open</string>
+	<string name="drawer_close">Close</string>
+	<string name="debug_error">Some error occured. Please restart the app and try again. Send a report <a href="https://abam.herokuapp.com/feedback">Here</a></string>
+	<string name="appunderlined"><u>QR Scanner</u></string>
+	<string name="appinfo">Scan and make QR code. Scan any type of QR or BARCode.If you like this app give me a feedback <a href="https://abam.herokuapp.com/feedback/">Here</a> .Stay Updated in <a href="https://abam.herokuapp.com/android/">ABAM Store</a></string>
+	<string name="madebyaswanth">Made By <a href="https://aswanthvc.herokuapp.com">Aswanth V c</a></string>
+	<string name="github">View in <a href="https://github.com/aswanthabam/">GitHub</a></string>
+	<string name="abam">View <a href="https://abam.herokuapp.com">ABAM</a></string>
+	<string name="permissionMessage">QR Scanner need <u><b>Storage</b> and <b>Camera</b></u> permission to continue.</string>
+</resources>
