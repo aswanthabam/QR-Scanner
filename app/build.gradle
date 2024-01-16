@@ -1,31 +1,40 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.0"
+    namespace 'com.abam.qrscanner'
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.abam.qrscanner"
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdk 24
+        targetSdk 34
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-	/**compile 'com.google.android.gms:play-services-ads:11.8.0'**/
-	implementation 'com.google.android.gms:play-services-vision:11.8.0'
-	implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation ('android.arch.core:runtime:1.+'){ force = true }
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation 'com.google.android.gms:play-services-vision:11.8.0'
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }

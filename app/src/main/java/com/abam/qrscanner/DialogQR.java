@@ -1,7 +1,6 @@
 package com.abam.qrscanner;
 
 import android.app.*;
-import android.support.v7.app.*;
 import android.os.*;
 import android.widget.*;
 import android.content.*;
@@ -10,6 +9,9 @@ import android.text.ClipboardManager;
 import android.net.*;
 import java.io.*;
 import android.provider.*;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.regex.*;
 public class DialogQR extends Dialog
 {
@@ -133,7 +135,7 @@ public class DialogQR extends Dialog
 			s.flush();
 			s.close();
 		}catch(Exception e){
-			Toast.makeText(a,"Cant save file",12).show();
+			Toast.makeText(a,"Cant save file", Toast.LENGTH_SHORT).show();
 		}
 	}
 	
