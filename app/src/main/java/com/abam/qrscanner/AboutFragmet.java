@@ -7,11 +7,14 @@ Copy righted content. Dont edit or republish.
 package com.abam.qrscanner;
 import android.view.*;
 import android.os.*;
-import android.support.v7.app.*;
 import android.content.*;
 import android.widget.*;
 import android.text.method.*;
 import android.animation.*;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 public class AboutFragmet extends Fragment
 {
 	private AppCompatActivity ACTIVITY;

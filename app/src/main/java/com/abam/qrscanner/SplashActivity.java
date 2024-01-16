@@ -1,8 +1,9 @@
 package com.abam.qrscanner;
 
-import android.support.v7.app.*;
 import android.os.*;
 import android.content.*;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity
 {

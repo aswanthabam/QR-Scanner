@@ -47,11 +47,11 @@ makeDir(dirPath);
 File file = new File(path);
 
 try {
-if (!file.exists())
-file.createNewFile();
-} catch (IOException e) {
-e.printStackTrace();
-}
+    if (!file.exists())
+        file.createNewFile();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
 }
 
 public static String readFile(String path) {

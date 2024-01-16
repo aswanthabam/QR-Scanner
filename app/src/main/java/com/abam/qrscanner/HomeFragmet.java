@@ -2,10 +2,12 @@ package com.abam.qrscanner;
 
 import android.view.*;
 import android.os.*;
-import android.support.v7.app.*;
 import android.content.*;
 import android.widget.*;
 import android.view.animation.*;
+
+import androidx.fragment.app.Fragment;
+
 public class HomeFragmet extends Fragment
 {
 	private MainActivity activity;

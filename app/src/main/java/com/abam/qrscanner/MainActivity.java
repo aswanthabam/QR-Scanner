@@ -1,27 +1,31 @@
 package com.abam.qrscanner;
 
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.support.design.widget.BottomNavigationView;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentTransaction;
+import android.Manifest;
 import android.view.MenuItem;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.*;
-import android.support.v7.app.*;
 import android.widget.*;
 import android.view.*;
 import android.content.pm.*;
 
-public class MainActivity extends AppCompatActivity 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
+
+public class MainActivity extends AppCompatActivity
 {
     
 	private BottomNavigationView bottomNav;
 	private DrawerLayout mDrawer;
 	private NavigationView mNav;
 	private ActionBarDrawerToggle mToogle;
-	private Toolbar mToolbar;
+	private androidx.appcompat.widget.Toolbar mToolbar;
 	
 	
     @Override
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity
 	public void itemSelection(int item){
 		switch(item){
 			case android.R.id.home:
-				mDrawer.openDrawer(Gravity.START);
+				mDrawer.openDrawer(GravityCompat.START);
 				break;
 			case R.id.drawer_navigation_item1:
 			case R.id.navigation_item1:
