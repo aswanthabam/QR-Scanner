@@ -1,20 +1,22 @@
 package com.abam.qrscanner;
-import android.support.v7.app.*;
-import android.support.v4.app.*;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.*;
+import androidx.fragment.app.Fragment;
+
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.*;
 import android.view.*;
 import android.os.*;
 import com.google.android.gms.vision.barcode.*;
 import com.google.android.gms.vision.*;
 import java.io.*;
-import android.*;
+
 import android.content.pm.*;
 import android.widget.*;
 import android.util.*;
 import android.graphics.drawable.*;
 import android.graphics.*;
-import com.google.zxing.*;
-import com.google.zxing.Reader;
 
 public class QRscanner extends Fragment
 {
@@ -54,6 +56,7 @@ public class QRscanner extends Fragment
 		Reader reader = new MultiFormatReader();
 		
 	}
+	@SuppressLint("ResourceType")
 	public void setAnimation(){
 		img.setBackgroundResource(R.anim.scan_anim);
 		anim = (AnimationDrawable) img.getBackground();
@@ -83,7 +86,7 @@ public class QRscanner extends Fragment
 		surface.getHolder().addCallback(new SurfaceHolder.Callback(){
 			@Override public void surfaceCreated(SurfaceHolder holder){
 				try{
-					if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {  
+					if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
 						cameraSource.start(surface.getHolder());  
 					} else {  
 						ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 6099);  

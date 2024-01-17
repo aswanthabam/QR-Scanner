@@ -1,6 +1,5 @@
 package com.abam.qrscanner;
 
-import android.support.v4.app.*;
 import android.view.*;
 import android.os.*;
 import android.widget.*;
@@ -16,7 +15,7 @@ import android.app.Dialog;
 import java.io.*;
 import android.net.*;
 import android.graphics.pdf.*;
-import android.support.v4.content.*;
+import androidx.core.content.*;
 public class QRgenerator extends Fragment
 {
 	private View v;

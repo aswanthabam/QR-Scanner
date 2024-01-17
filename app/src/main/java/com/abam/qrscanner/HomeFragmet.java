@@ -1,6 +1,5 @@
 package com.abam.qrscanner;
 
-import android.support.v4.app.*;
 import android.view.*;
 import android.os.*;
 import android.support.v7.app.*;

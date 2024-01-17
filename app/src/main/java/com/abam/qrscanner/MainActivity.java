@@ -3,21 +3,15 @@ package com.abam.qrscanner;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import androidx.core.app.Fragment;
+import androidx.core.app.FragmentTransaction;
 import android.view.MenuItem;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.annotation.NonNull;
-import android.view.LayoutInflater;
-import android.widget.TextView;
-import android.support.v4.widget.*;
 import android.support.design.widget.*;
 import android.support.v7.app.*;
 import android.widget.*;
 import android.view.*;
-import android.*;
 import android.content.pm.*;
 
 public class MainActivity extends AppCompatActivity 

@@ -5,14 +5,12 @@ Copy righted content. Dont edit or republish.
 ©ABAM
 */
 package com.abam.qrscanner;
-import android.support.v4.app.*;
 import android.view.*;
 import android.os.*;
 import android.support.v7.app.*;
 import android.content.*;
 import android.widget.*;
 import android.text.method.*;
-import android.view.animation.*;
 import android.animation.*;
 public class AboutFragmet extends Fragment
 {
