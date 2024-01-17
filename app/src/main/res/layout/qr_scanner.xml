@@ -19,8 +19,6 @@
 			android:id="@+id/qr_scannerSurfaceView1"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:layout_above="@+id/btnAction"
-			android:layout_alignParentLeft="true"
 			android:layout_alignParentStart="true"
 			android:layout_centerVertical="true"
 			android:layout_margin="20dp"/>
@@ -30,7 +28,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:layout_margin="20dp"
-			/>
+			android:contentDescription="@string/qr_result" />
 		
 	</RelativeLayout>
 

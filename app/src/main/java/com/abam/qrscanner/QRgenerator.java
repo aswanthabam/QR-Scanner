@@ -4,18 +4,19 @@ import android.view.*;
 import android.os.*;
 import android.widget.*;
 import android.view.View.*;
-import android.support.v7.app.*;
 import android.content.*;
 import android.graphics.*;
-import androidmads.library.qrgenearator.*;
-import com.google.zxing.*;
 import android.util.*;
 import android.text.*;
 import android.app.Dialog;
 import java.io.*;
 import android.net.*;
 import android.graphics.pdf.*;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.*;
+import androidx.fragment.app.Fragment;
+import androidmads.library.qrgenearator.*;
+
 public class QRgenerator extends Fragment
 {
 	private View v;
@@ -52,16 +53,16 @@ public class QRgenerator extends Fragment
 		int height = point.y; 
 		int dimen = width < height ? width : height; 
 		dimen = dimen * 3 / 4; 
-		QRGEncoder qrEncoder = new QRGEncoder(text, null, QRGContents.Type.TEXT, dimen); 
+		QRGEncoder qrEncoder = new QRGEncoder(text, null, QRGContents.Type.TEXT, dimen);
 		try { 
-			final Bitmap bitmap = qrEncoder.encodeAsBitmap(); 
+			final Bitmap bitmap = qrEncoder.getBitmap();
 			activity.runOnUiThread(new Runnable(){
 				@Override public void run(){
 					view.setImageBitmap(bitmap);
 				}
 			});
 			return bitmap;
-		} catch (WriterException e) {
+		} catch (Exception e) {
 			Log.e("Tag", e.toString()); 
 		}
 		return null;
@@ -103,7 +104,7 @@ public class QRgenerator extends Fragment
 			@Override public void onClick(View v){
 				File f = saveBitmap(bb);
 				if(f == null){
-					Toast.makeText(context,"Cant save file.",12).show();
+					Toast.makeText(context,"Cant save file.", Toast.LENGTH_SHORT).show();
 				}else{
 					makeSavedDialog("File Saved!","Image file is saved. Path: "+f.getAbsolutePath());
 				}
@@ -130,7 +131,7 @@ public class QRgenerator extends Fragment
 			@Override public void onClick(View v){
 				File f = createPdf(bb);
 				if(f == null){
-					Toast.makeText(context,"Cant save pdf",12).show();
+					Toast.makeText(context,"Cant save pdf", Toast.LENGTH_SHORT).show();
 				}else{
 					makeSavedDialog("File saved!","PDF file saved successfully. Path: "+f.getAbsolutePath());
 				}
@@ -195,7 +196,7 @@ public class QRgenerator extends Fragment
 				if(!TextUtils.isEmpty(text)){
 					showDialog(text);
 				}else{
-					Toast.makeText(context,"Content is empty",12).show();
+					Toast.makeText(context,"Content is empty", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
