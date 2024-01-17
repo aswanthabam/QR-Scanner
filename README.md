@@ -2,6 +2,8 @@
 
 # QR Scanner
 
+<span><a href='https://github.com/aswanthabam/QR-Scanner/releases'><img src='https://img.shields.io/badge/Download-3DDC84?style=for-the-badge&logo=download&logoColor=white'/></a> <img src="https://img.shields.io/badge/Android_Studio-FFDC84?style=for-the-badge&logo=android&logoColor=white"/></span>
+
 **Description:**
 **QR Scanner** is your quick and easy solution for scanning QR codes on the go. Effortlessly scan QR codes and access information in a flash. It's the perfect tool for decoding links, contact details, and more with a user-friendly interface.
 
