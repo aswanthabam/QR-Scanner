@@ -1,11 +1,11 @@
 package com.abam.qrscanner;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.util.Log;
 import android.view.MenuItem;
 import android.os.Bundle;
 import android.content.pm.*;
-import com.abam.qrscanner.R;
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,17 +17,16 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity
 {
     
 	private BottomNavigationView bottomNav;
 	private DrawerLayout mDrawer;
-	private NavigationView mNav;
-	private ActionBarDrawerToggle mToogle;
-	private androidx.appcompat.widget.Toolbar mToolbar;
 
-	public final static int drawer_navigation_item1 = R.id.drawer_navigation_item1;
-    @Override
+    @SuppressLint("SuspiciousIndentation")
+	@Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -45,22 +44,19 @@ public class MainActivity extends AppCompatActivity
 	
 	public void initDrawer(){
 		mDrawer = (DrawerLayout) findViewById(R.id.mainActivitydrawer_layout);
-		mNav = (NavigationView) findViewById(R.id.mainActivity_drawer);
-		mToolbar = (Toolbar) findViewById(R.id.mainActivitytoolbar);
+		NavigationView mNav = (NavigationView) findViewById(R.id.mainActivity_drawer);
+		Toolbar mToolbar = (Toolbar) findViewById(R.id.mainActivitytoolbar);
 		setSupportActionBar(mToolbar);
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowTitleEnabled(true);
-		mNav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
-			@Override public boolean onNavigationItemSelected(MenuItem item){
-				itemSelection(item.getItemId());
-				mDrawer.closeDrawers();
-				return true;
-			}
-			
+		mNav.setNavigationItemSelectedListener(item -> {
+			itemSelection(item.getItemId());
+			mDrawer.closeDrawers();
+			return true;
 		});
 		mNav.inflateHeaderView(R.layout.drawer_head);
-		mToogle = new ActionBarDrawerToggle(this,mDrawer,mToolbar,R.string.drawer_open,R.string.drawer_close);
-		mDrawer.setDrawerListener(mToogle);
+		ActionBarDrawerToggle mToogle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.drawer_open, R.string.drawer_close);
+		mDrawer.addDrawerListener(mToogle);
 		mToogle.syncState();
 	}
 	
@@ -104,7 +100,7 @@ public class MainActivity extends AppCompatActivity
 	
 	public void getPermission(){
 		if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-			
+			Log.i("MainActivity","Permission granted!");
 		}else{
 			requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},6099);
 		}
@@ -112,12 +108,10 @@ public class MainActivity extends AppCompatActivity
 	
 	public void initBottomNav(){
 		bottomNav = (BottomNavigationView) findViewById(R.id.navigation);
-        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
-			@Override public boolean onNavigationItemSelected(MenuItem item){
-				itemSelection(item.getItemId());
-				mDrawer.closeDrawers();
-				return true;
-			}
+        bottomNav.setOnNavigationItemSelectedListener(item -> {
+			itemSelection(item.getItemId());
+			mDrawer.closeDrawers();
+			return true;
 		});
 	}
 
